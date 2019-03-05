@@ -1,26 +1,25 @@
 # OpenArcadeGun
 
-A project to produce hardware and software to replace standard camera based arcade guns with versions using internal movement sensors to calculate position. This project was inspired after playing the game 'Tomb Raider Arcade', where the guns in the system feature no cameras, and use internal movement sensors.
+A project to produce hardware to tracker an infrared cameras point angle at a screen
 
-The project will also hopefully integrate some code from the JVSEmulator project, and produce a hardware version that can plug strait into the JVS port of a Sega Naomi/Chihiro/Lindbergh/Triforce etc.
+## Protocol
 
-## Benefits of the project
+Initially the arduino should output essentially a stream of comma seperated values which are the X and Y coordinates scaled between 0 and 255 (1 byte) along with the trigger status (0 off, 1 on).
 
-I can see multiple benefits of this project including:
+Below is an example of the stream you might expect:
 
-- Cheeper hardware costs to make guns
-- Less prone to error such as: gun lens damage, board failure
+```
+0,0,0
+0,10,0
+10,0,1
+253,222,0
+50,24,0
+```
 
-## Possible draw backs
+## Parts
 
-The accuracy on this is unlikely to be quite as precise as an IR system with 4 IR anchor points. However this should work well enough, if calibrated at the position of play to play all games with a cross-hair and possibly even games without.
+Requires:
 
-## Hardware
-
-This project is based on an Arduino Nano and an MPU-9250 inertial measurement unit which includes a 3 Axis Gyroscope, 3 Axis Accelerometer and 3 Axis Magnetometer. The project will take advantage of the 9250's Digital Motion Processor (DMP) which can fairly accurately predict motion events which we can then map onto the screen as X, Y coordinates.
-
-## Links
-
-Below are some resources where initial code and designs are inspired from:
-
-<https://www.hackster.io/movsensllc/diy-imu-based-smarttv-controller-mouse-with-arduino-micro-548353>
+- 1 x DFRobot IR Sensor
+- 10 x IR LEDs
+- 1 x Switch for trigger
