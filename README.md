@@ -23,3 +23,15 @@ Requires:
 - 1 x DFRobot IR Sensor
 - 8 x IR LEDs with resistors
 - 1 x Switch for trigger
+
+## Setup
+
+LEDs should be setup around a screen like this
+
+```
+0    1    2
+          
+8         3
+          
+7    5    4
+```
