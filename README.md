@@ -21,5 +21,5 @@ Below is an example of the stream you might expect:
 Requires:
 
 - 1 x DFRobot IR Sensor
-- 10 x IR LEDs
+- 8 x IR LEDs with resistors
 - 1 x Switch for trigger
