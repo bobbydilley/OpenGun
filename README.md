@@ -1,5 +1,9 @@
 # OpenArcadeGun
 
+This repo has turned into somewhere that I've dumped any code written to attempt to support light guns. Inside is IR based, Light tracking CRT based and IMU (Gyro + Accel) based code. Some of the code is snipped from other people, if you want it taken down please just create an issue and I will remove it.
+
+# Initial Readme
+
 A project to produce hardware to tracker an infrared cameras point angle at a screen
 
 ## Protocol
